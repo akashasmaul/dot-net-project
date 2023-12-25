@@ -10,3 +10,5 @@ D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\obj\Debug\BLL.dll
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\obj\Debug\BLL.pdb
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\bin\Debug\EntityFramework.dll
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\bin\Debug\EntityFramework.xml
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\bin\Debug\AutoMapper.dll
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\bin\Debug\AutoMapper.xml

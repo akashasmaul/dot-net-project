@@ -8,10 +8,16 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    public class BuyerProfile
+    public class Advertiser
     {
         [Key]
         public int Id { get; set; }
+        [Required]
+        [StringLength(20)]
+        public string UserName { get; set; }
+        [Required]
+        [StringLength(20)]
+        public string Password { get; set; }
         [Required]
         [StringLength(20)]
         public string FirstName { get; set; }
@@ -32,8 +38,13 @@ namespace DAL.Models
         [Required]
         public string Gender { get; set; }
 
-        [ForeignKey("User")]
-        public int User_Id { get; set; }
-        public virtual User User { get; set; }
+        [ForeignKey("Advertise")]
+        public int AdvertiseId { get; set; }
+        public virtual Advertise Advertise { get; set; }
+        [Required]
+        [StringLength(20)]
+        public string City { get; set; }
+
+
     }
 }

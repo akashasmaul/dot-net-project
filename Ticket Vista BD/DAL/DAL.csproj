@@ -51,26 +51,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Migrations\202312250926103_initDB.cs" />
     <Compile Include="Migrations\202312250926103_initDB.designer.cs">
       <DependentUpon>202312250926103_initDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312251301377_DatabaseModified.cs" />
+    <Compile Include="Migrations\202312251301377_DatabaseModified.designer.cs">
+      <DependentUpon>202312251301377_DatabaseModified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312251414268_EntityModified.cs" />
+    <Compile Include="Migrations\202312251414268_EntityModified.designer.cs">
+      <DependentUpon>202312251414268_EntityModified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312251701220_CityAdded.cs" />
+    <Compile Include="Migrations\202312251701220_CityAdded.designer.cs">
+      <DependentUpon>202312251701220_CityAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Repos\BuyerRepo.cs" />
+    <Compile Include="Repos\Repo.cs" />
     <Compile Include="TCVContext.cs" />
-    <Compile Include="Models\AdminProfile.cs" />
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Advertise.cs" />
-    <Compile Include="Models\AdvertiserProfile.cs" />
-    <Compile Include="Models\BuyerProfile.cs" />
-    <Compile Include="Models\EmployeeProfile.cs" />
+    <Compile Include="Models\Advertiser.cs" />
+    <Compile Include="Models\Buyer.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Salary.cs" />
     <Compile Include="Models\Token.cs" />
-    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Repos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -78,6 +90,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202312250926103_initDB.resx">
       <DependentUpon>202312250926103_initDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312251301377_DatabaseModified.resx">
+      <DependentUpon>202312251301377_DatabaseModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312251414268_EntityModified.resx">
+      <DependentUpon>202312251414268_EntityModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312251701220_CityAdded.resx">
+      <DependentUpon>202312251701220_CityAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

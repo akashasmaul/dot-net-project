@@ -71,3 +71,8 @@ D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\AppLayer\obj\Debug\AppL
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\AppLayer\obj\Debug\AppLayer.csproj.CopyComplete
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\AppLayer\obj\Debug\AppLayer.dll
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\AppLayer\obj\Debug\AppLayer.pdb
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\AppLayer\bin\DAL.dll
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\AppLayer\bin\AutoMapper.dll
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\AppLayer\bin\DAL.pdb
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\AppLayer\bin\DAL.dll.config
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\AppLayer\bin\AutoMapper.xml

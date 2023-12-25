@@ -8,10 +8,16 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    public class AdminProfile
+    public class Admin
     {
         [Key]
         public int Id { get; set; }
+        [Required]
+        [StringLength(20)]
+        public string UserName { get; set; }
+        [Required]
+        [StringLength(20)]
+        public string Password { get; set; }
         [Required]
         [StringLength(20)]
         public string FirstName { get; set; }
@@ -34,10 +40,9 @@ namespace DAL.Models
         [Required]
         [ForeignKey("Salary")]
         public int SalId { get; set; } 
-
-        [ForeignKey("User")]
-        public int User_Id { get; set; }
         public virtual Salary Salary { get; set; }
-        public virtual User User { get; set; }
+        [Required]
+        [StringLength(20)]
+        public string City { get; set; }
     }
 }

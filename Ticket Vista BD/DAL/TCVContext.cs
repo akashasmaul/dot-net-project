@@ -10,11 +10,10 @@ namespace DAL
 {
     internal class TCVContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
-        public DbSet<BuyerProfile> BuyerProfiles { get; set; }
-        public DbSet<EmployeeProfile> EmployeeProfiles { get; set; }
-        public DbSet<AdminProfile> AdminProfiles { get; set; }
-        public DbSet<AdvertiserProfile> AdvertiserProfiles { get; set; }
+        public DbSet<Buyer> Buyers { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<Advertiser> Advertisers { get; set; }
         public DbSet<Token> Tokens { get; set; }
         public DbSet<Salary> Salarys { get; set; }
         public DbSet<Advertise> Advertises { get; set;}
