@@ -1,0 +1,12 @@
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\bin\Debug\BLL.dll
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\bin\Debug\BLL.pdb
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\bin\Debug\DAL.dll
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\bin\Debug\DAL.pdb
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\bin\Debug\DAL.dll.config
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\obj\Debug\BLL.dll
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\obj\Debug\BLL.pdb
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\bin\Debug\EntityFramework.dll
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\BLL\bin\Debug\EntityFramework.xml
