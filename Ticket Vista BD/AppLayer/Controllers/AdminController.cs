@@ -1,4 +1,5 @@
-﻿using BLL.DTOs;
+﻿using AppLayer.Auth;
+using BLL.DTOs;
 using BLL.Services;
 using System;
 using System.Collections.Generic;
@@ -41,5 +42,25 @@ namespace AppLayer.Controllers
             }
 
         }
+
+
+
+        [AdminLogged]
+        [HttpGet]
+        [Route("api/admin/getAdmins")]
+        public HttpResponseMessage Get()
+        {
+            try
+            {
+             var data = AdminService.Get();
+            return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch(Exception ex) 
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
+            }
+            
+        }
+
     }
 }

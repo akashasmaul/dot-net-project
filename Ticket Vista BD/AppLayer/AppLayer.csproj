@@ -92,6 +92,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Auth\AdminLogged.cs" />
+    <Compile Include="Auth\AdvertiserLogged.cs" />
+    <Compile Include="Auth\BuyerLogged.cs" />
+    <Compile Include="Auth\EmployeeLogged.cs" />
+    <Compile Include="Auth\Logged.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AdvertiserController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
@@ -114,7 +119,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Auth\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

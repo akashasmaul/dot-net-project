@@ -1,4 +1,5 @@
-﻿using AppLayer.Models;
+﻿using AppLayer.Auth;
+using AppLayer.Models;
 using BLL.Services;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,23 @@ namespace AppLayer.Controllers
             catch (Exception ex)
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Message = ex.Message });
+            }
+        }
+
+        [Logged]
+        [HttpPost]
+        [Route("api/Logout")]
+        public HttpResponseMessage Logout()
+        {
+            var token = Request.Headers.Authorization.ToString();
+            try
+            {
+                var res = AuthService.Logout(token);
+                return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Successfully Logged out" });
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message });
             }
         }
     }

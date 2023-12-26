@@ -74,6 +74,10 @@
     <Compile Include="Migrations\202312261103421_tableAltered.designer.cs">
       <DependentUpon>202312261103421_tableAltered.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312261819096_TableModifiedWithTicketPrice.cs" />
+    <Compile Include="Migrations\202312261819096_TableModifiedWithTicketPrice.designer.cs">
+      <DependentUpon>202312261819096_TableModifiedWithTicketPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Advertise.cs" />
     <Compile Include="Models\AdvertiserAdvertise.cs" />
@@ -111,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312261103421_tableAltered.resx">
       <DependentUpon>202312261103421_tableAltered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312261819096_TableModifiedWithTicketPrice.resx">
+      <DependentUpon>202312261819096_TableModifiedWithTicketPrice.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
