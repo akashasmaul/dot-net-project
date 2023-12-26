@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
@@ -6,12 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.Models
+namespace BLL.DTOs
 {
-    public class Advertiser
+    public class AdvertiserDTO
     {
-
-        [Key]
+        [Required]
         public int Id { get; set; }
         [Required]
         [StringLength(20)]
@@ -38,10 +38,9 @@ namespace DAL.Models
         public string DateOfBirth { get; set; }
         [Required]
         public string Gender { get; set; }
+
         [Required]
         [StringLength(20)]
         public string City { get; set; }
-
-
     }
 }

@@ -16,5 +16,21 @@ namespace DAL
         {
             return new BuyerRepo();
         }
+
+        public static IRepo<Advertiser, int, bool> AdvertiserData()
+        {
+            return new AdvertiserRepo();
+        }
+
+        public static IRepo<Admin, int, bool> AdminData()
+        {
+            return new AdminRepo();
+        }
+
+
+        public static IRepo<Employee, int, bool> EmployeeData()
+        {
+            return new EmployeeRepo();
+        }
     }
 }
