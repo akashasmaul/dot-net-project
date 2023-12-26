@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Migrations\202312260442248_TableDeleted.cs" />
     <Compile Include="Migrations\202312260442248_TableDeleted.designer.cs">
@@ -65,6 +66,14 @@
     <Compile Include="Migrations\202312260511394_advertiseradvertiseAdded.designer.cs">
       <DependentUpon>202312260511394_advertiseradvertiseAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312261052508_UserDBAdded.cs" />
+    <Compile Include="Migrations\202312261052508_UserDBAdded.designer.cs">
+      <DependentUpon>202312261052508_UserDBAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312261103421_tableAltered.cs" />
+    <Compile Include="Migrations\202312261103421_tableAltered.designer.cs">
+      <DependentUpon>202312261103421_tableAltered.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Advertise.cs" />
     <Compile Include="Models\AdvertiserAdvertise.cs" />
@@ -73,6 +82,7 @@
     <Compile Include="Repos\BuyerRepo.cs" />
     <Compile Include="Repos\EmployeeRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
+    <Compile Include="Repos\TokenRepo.cs" />
     <Compile Include="TCVContext.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Advertiser.cs" />
@@ -95,6 +105,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312260511394_advertiseradvertiseAdded.resx">
       <DependentUpon>202312260511394_advertiseradvertiseAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312261052508_UserDBAdded.resx">
+      <DependentUpon>202312261052508_UserDBAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312261103421_tableAltered.resx">
+      <DependentUpon>202312261103421_tableAltered.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

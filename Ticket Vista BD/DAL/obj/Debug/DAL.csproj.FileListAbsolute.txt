@@ -14,3 +14,5 @@ D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migra
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.advertisetableAdded.resources
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.advertiseradvertiseAdded.resources
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.UserDBAdded.resources
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.tableAltered.resources

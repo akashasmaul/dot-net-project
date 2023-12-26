@@ -20,5 +20,6 @@ namespace DAL
         public DbSet<AdvertiserAdvertise> AdvertiserAdvertises { get; set; }
 
 
+
     }
 }

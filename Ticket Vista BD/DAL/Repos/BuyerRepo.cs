@@ -2,14 +2,22 @@
 using DAL.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class BuyerRepo : Repo, IRepo<Buyer, int, bool>
+    internal class BuyerRepo : Repo, IRepo<Buyer, int, bool> ,IAuth<bool>
     {
+        public bool Authenticate(string username, string password)
+        {
+            var data = db.Buyers.FirstOrDefault(u=>u.UserName.Equals(username) && u.Password.Equals(password)); 
+            if(data != null) return true;
+            return false;
+        }
+
         public bool Create(Buyer obj)
         {
             db.Buyers.Add(obj);
