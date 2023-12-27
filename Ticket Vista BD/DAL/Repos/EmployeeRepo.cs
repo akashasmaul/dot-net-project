@@ -44,6 +44,7 @@ namespace DAL.Repos
         public bool Update(Employee obj)
         {
             var data = db.Employees.Find(obj.Id);
+            obj.Password = data.Password;
             db.Entry(data).CurrentValues.SetValues(obj);
             return db.SaveChanges() > 0;
         }

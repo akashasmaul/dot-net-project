@@ -43,6 +43,7 @@ namespace DAL.Repos
         public bool Update(Admin obj)
         {
             var data = db.Admins.Find(obj.Id);
+            obj.Password = data.Password;
             db.Entry(data).CurrentValues.SetValues(obj);
             return db.SaveChanges() > 0;
         }

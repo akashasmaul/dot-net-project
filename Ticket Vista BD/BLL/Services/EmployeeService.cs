@@ -12,17 +12,30 @@ namespace BLL.Services
 {
     public class EmployeeService
     {
-        public static List<EmployeeDTO> Get()
+        public static List<EmployeeViewDTO> Get()
         {
             var data = DataAccessFactory.EmployeeData().Read();
             var cfg = new MapperConfiguration(c =>
             {
-                c.CreateMap<Employee, EmployeeDTO>();
+                c.CreateMap<Employee, EmployeeViewDTO>();
             });
             var mapper = new Mapper(cfg);
-            var mapped = mapper.Map<List<EmployeeDTO>>(data);
+            var mapped = mapper.Map<List<EmployeeViewDTO>>(data);
             return mapped;
         }
+
+        public static EmployeeViewDTO Get(int id)
+        {
+            var data = DataAccessFactory.EmployeeData().Read(id);
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Employee, EmployeeViewDTO>();
+            });
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<EmployeeViewDTO>(data);
+            return mapped;
+        }
+
 
         public static bool Create(EmployeeDTO obj)
         {
@@ -37,5 +50,29 @@ namespace BLL.Services
 
             return result;
         }
+
+        public static bool Delete(int id)
+        {
+            return DataAccessFactory.EmployeeData().Delete(id);
+
+        }
+
+
+        public static bool Update( EmployeeUpdateDTO obj)
+        {
+
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<EmployeeUpdateDTO, Employee>();
+            });
+            var mapper = new Mapper(cfg);
+            var employee = mapper.Map<Employee>(obj);
+
+            var result = DataAccessFactory.EmployeeData().Update(employee);
+
+            return result;
+        }
+
+
     }
 }

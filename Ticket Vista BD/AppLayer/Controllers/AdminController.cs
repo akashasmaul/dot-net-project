@@ -13,6 +13,7 @@ namespace AppLayer.Controllers
 {
     public class AdminController : ApiController
     {
+        [AdminLogged]
         [HttpPost]
         [Route("api/Registration/Admin")]
         public HttpResponseMessage Create(AdminDTO obj)
@@ -52,14 +53,173 @@ namespace AppLayer.Controllers
         {
             try
             {
-             var data = AdminService.Get();
-            return Request.CreateResponse(HttpStatusCode.OK, data);
+                var data = AdminService.Get();
+                return Request.CreateResponse(HttpStatusCode.OK, data);
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
             }
-            
+
+        }
+
+
+        [AdminLogged]
+        [HttpGet]
+        [Route("api/admin/getAdmin/{id}")]
+        public HttpResponseMessage Get(int id)
+        {
+            try
+            {
+                var data = AdminService.Get(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
+            }
+
+        }
+
+
+
+        [AdminLogged]
+        [HttpGet]
+        [Route("api/admin/DeleteAdmin/{id}")]
+        public HttpResponseMessage DeleteAdmin(int id)
+        {
+            try
+            {
+
+                var data = AdminService.Delete(id);
+                return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Deleted Succesfully" });
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
+            }
+
+        }
+
+        [AdminLogged]
+        [HttpPost]
+        [Route("api/admin/UpdateAdmin")]
+        public HttpResponseMessage UpdateAdmin(AdminUpdateDTO obj)
+        {
+            try
+            {
+                var data = AdminService.Update(obj);
+                return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Updated Succesfully", Data = obj });
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = obj });
+            }
+
+        }
+
+
+        [AdminLogged]
+        [HttpPost]
+        [Route("api/Registration/Employee")]
+        public HttpResponseMessage Create(EmployeeDTO obj)
+        {
+            try
+            {
+                var data = EmployeeService.Create(obj);
+                if (data)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Registered Successfully", Data = obj });
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = "Not Registered", Data = obj });
+                }
+            }
+            catch (DbUpdateException dbEx)
+            {
+                Exception innerException = dbEx.InnerException;
+                while (innerException.InnerException != null)
+                    innerException = innerException.InnerException;
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = innerException.Message, Data = obj });
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = obj });
+            }
+        }
+
+
+        [AdminLogged]
+        [HttpGet]
+        [Route("api/admin/getEmployees")]
+        public HttpResponseMessage GetEmployee()
+        {
+            try
+            {
+                var data = EmployeeService.Get();
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
+            }
+
+        }
+
+
+
+        [AdminLogged]
+        [HttpGet]
+        [Route("api/admin/getEmployee/{id}")]
+        public HttpResponseMessage GetEmployee(int id)
+        {
+            try
+            {
+                var data = EmployeeService.Get(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
+            }
+
+        }
+
+
+        [AdminLogged]
+        [HttpPost]
+        [Route("api/admin/UpdateEmployee")]
+        public HttpResponseMessage UpdateEmployee(EmployeeUpdateDTO obj)
+        {
+            try
+            {
+                var data = EmployeeService.Update(obj);
+                return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Updated Succesfully", Data = obj });
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = obj });
+            }
+
+        }
+
+
+        [AdminLogged]
+        [HttpGet]
+        [Route("api/admin/DeleteEmployee/{id}")]
+        public HttpResponseMessage DeleteEmployee(int id)
+        {
+            try
+            {
+                var data = EmployeeService.Delete(id);
+                return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Deleted Succesfully" });
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
+            }
+
         }
 
     }

@@ -12,15 +12,27 @@ namespace BLL.Services
 {
      public class AdminService
     {
-        public static List<AdminDTO> Get()
+        public static List<AdminViewDTO> Get()
         {
             var data = DataAccessFactory.AdminData().Read();
             var cfg = new MapperConfiguration(c =>
             {
-                c.CreateMap<Admin, AdminDTO>();
+                c.CreateMap<Admin, AdminViewDTO>();
             });
             var mapper = new Mapper(cfg);
-            var mapped = mapper.Map<List<AdminDTO>>(data);
+            var mapped = mapper.Map<List<AdminViewDTO>>(data);
+            return mapped;
+        }
+
+        public static AdminViewDTO Get(int id)
+        {
+            var data = DataAccessFactory.AdminData().Read(id);
+            var cfg = new MapperConfiguration(c =>
+            {
+               c.CreateMap<Admin , AdminViewDTO>(); 
+            });
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<AdminViewDTO>(data);
             return mapped;
         }
 
@@ -37,5 +49,28 @@ namespace BLL.Services
 
             return result;
         }
+
+        public static bool Delete(int id) 
+        {
+            return DataAccessFactory.AdminData().Delete(id);
+
+        }
+
+        public static bool Update( AdminUpdateDTO obj)
+        {
+
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<AdminUpdateDTO, Admin>();
+            });
+            var mapper = new Mapper(cfg);
+            var admin = mapper.Map<Admin>(obj);
+
+            var result = DataAccessFactory.AdminData().Update(admin);
+
+            return result;
+        }
+
+
     }
 }
