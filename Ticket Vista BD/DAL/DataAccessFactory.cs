@@ -12,19 +12,20 @@ namespace DAL
 {
     public class DataAccessFactory
     {
-        public static IAuth<bool> BuyerAuthData()
+
+        public static IAuth<Buyer> BuyerAuthData()
         {
             return new BuyerRepo();
         }
-        public static IAuth<bool> AdminAuthData()
+        public static IAuth<Admin> AdminAuthData()
         {
             return new AdminRepo();
         }
-        public static IAuth<bool> EmployeeAuthData()
+        public static IAuth<Employee> EmployeeAuthData()
         {
             return new EmployeeRepo();
         }
-        public static IAuth<bool> AdvertiserAuthData()
+        public static IAuth<Advertiser> AdvertiserAuthData()
         {
             return new AdvertiserRepo();
         }

@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class BuyerRepo : Repo, IRepo<Buyer, int, bool> ,IAuth<bool>
+    internal class BuyerRepo : Repo, IRepo<Buyer, int, bool> ,IAuth<Buyer>
     {
-        public bool Authenticate(string username, string password)
-        {
-            var data = db.Buyers.FirstOrDefault(u=>u.UserName.Equals(username) && u.Password.Equals(password)); 
-            if(data != null) return true;
-            return false;
-        }
 
+        public Buyer Authenticate(string username, string password)
+        {
+            var data = db.Buyers.FirstOrDefault(u => u.UserName.Equals(username) && u.Password.Equals(password));
+            if (data != null) return data;
+            return null;
+        }
         public bool Create(Buyer obj)
         {
             db.Buyers.Add(obj);

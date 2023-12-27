@@ -19,13 +19,14 @@ namespace BLL.Services
             var employee = DataAccessFactory.EmployeeAuthData().Authenticate(username, password);
             var advertiser = DataAccessFactory.AdvertiserAuthData().Authenticate(username, password);
 
-            if (buyer)
+            if (buyer != null)
             {
                 var token = new Token();
                 token.Username = username;
                 token.CreatedAt = DateTime.Now;
                 token.TokenKey = Guid.NewGuid().ToString();
                 token.Type = "Buyer";
+                token.UserId = buyer.Id;
                 var ret = DataAccessFactory.TokenData().Create(token);
                 if (ret != null)
                 {
@@ -37,13 +38,14 @@ namespace BLL.Services
                     return mapper.Map<TokenDTO>(ret);
                 }
             }
-            else if (admin)
+            else if (admin != null)
             {
                 var token = new Token();
                 token.Username = username;
                 token.CreatedAt = DateTime.Now;
                 token.TokenKey = Guid.NewGuid().ToString();
                 token.Type = "Admin";
+                token.UserId = admin.Id;
                 var ret = DataAccessFactory.TokenData().Create(token);
                 if (ret != null)
                 {
@@ -55,7 +57,7 @@ namespace BLL.Services
                     return mapper.Map<TokenDTO>(ret);
                 }
             }
-            else if (employee)
+            else if (employee != null)
             {
 
                 var token = new Token();
@@ -63,6 +65,7 @@ namespace BLL.Services
                 token.CreatedAt = DateTime.Now;
                 token.TokenKey = Guid.NewGuid().ToString();
                 token.Type = "Employee";
+                token.UserId = employee.Id;
                 var ret = DataAccessFactory.TokenData().Create(token);
                 if (ret != null)
                 {
@@ -74,13 +77,14 @@ namespace BLL.Services
                     return mapper.Map<TokenDTO>(ret);
                 }
             }
-            else if (advertiser)
+            else if (advertiser != null)
             {
                 var token = new Token();
                 token.Username = username;
                 token.CreatedAt = DateTime.Now;
                 token.TokenKey = Guid.NewGuid().ToString();
                 token.Type = "Advertiser";
+                token.UserId = advertiser.Id;
                 var ret = DataAccessFactory.TokenData().Create(token);
                 if (ret != null)
                 {

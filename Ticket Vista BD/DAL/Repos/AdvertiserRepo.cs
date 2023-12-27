@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class AdvertiserRepo : Repo, IRepo<Advertiser, int, bool>, IAuth<bool>
+    internal class AdvertiserRepo : Repo, IRepo<Advertiser, int, bool>, IAuth<Advertiser>
     {
-        public bool Authenticate(string username, string password)
+        public Advertiser Authenticate(string username, string password)
         {
 
             var data = db.Advertisers.FirstOrDefault(u => u.UserName.Equals(username) && u.Password.Equals(password));
-            if (data != null) return true;
-            return false;
+            if (data != null) return data;
+            return null;
         }
 
         public bool Create(Advertiser obj)

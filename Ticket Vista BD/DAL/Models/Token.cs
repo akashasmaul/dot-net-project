@@ -20,5 +20,7 @@ namespace DAL.Models
         public string Type { get; set; }
         [Required]
         public string Username { get; set; }
+        [Required]
+        public int UserId { get; set; }
     }
 }

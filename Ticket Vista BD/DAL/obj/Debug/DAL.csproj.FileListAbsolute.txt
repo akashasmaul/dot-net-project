@@ -17,3 +17,4 @@ D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migra
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.UserDBAdded.resources
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.tableAltered.resources
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.TableModifiedWithTicketPrice.resources
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.tempUpdate.resources

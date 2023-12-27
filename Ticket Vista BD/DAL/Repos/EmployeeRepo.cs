@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class EmployeeRepo : Repo, IRepo<Employee, int, bool>, IAuth<bool>
+    internal class EmployeeRepo : Repo, IRepo<Employee, int, bool>, IAuth<Employee>
     {
-        public bool Authenticate(string username, string password)
+        public Employee Authenticate(string username, string password)
         {
 
             var data = db.Employees.FirstOrDefault(u => u.UserName.Equals(username) && u.Password.Equals(password));
-            if (data != null) return true;
-            return false;
+            if (data != null) return data;
+            return null;
         }
 
         public bool Create(Employee obj)
