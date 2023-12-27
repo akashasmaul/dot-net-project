@@ -38,5 +38,17 @@ namespace BLL.Services
             return result;
         }
 
+
+        public static AdvertiserDTO UnprotectedGet(int id)
+        {
+            var data = DataAccessFactory.AdvertiserData().Read(id);
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Advertiser, AdvertiserDTO>();
+            });
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<AdvertiserDTO>(data);
+            return mapped;
+        }
     }
 }

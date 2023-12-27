@@ -38,5 +38,19 @@ namespace BLL.Services
             return result;
         }
 
+
+
+        public static BuyerDTO UnprotectedGet(int id)
+        {
+            var data = DataAccessFactory.BuyerData().Read(id);
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Buyer, BuyerDTO>();
+            });
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<BuyerDTO>(data);
+            return mapped;
+        }
+
     }
 }

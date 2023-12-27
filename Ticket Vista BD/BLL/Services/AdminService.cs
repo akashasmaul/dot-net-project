@@ -29,10 +29,22 @@ namespace BLL.Services
             var data = DataAccessFactory.AdminData().Read(id);
             var cfg = new MapperConfiguration(c =>
             {
-               c.CreateMap<Admin , AdminViewDTO>(); 
+                c.CreateMap<Admin, AdminViewDTO>();
             });
             var mapper = new Mapper(cfg);
             var mapped = mapper.Map<AdminViewDTO>(data);
+            return mapped;
+        }
+
+        public static AdminDTO UnprotectedGet(int id)
+        {
+            var data = DataAccessFactory.AdminData().Read(id);
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Admin, AdminDTO>();
+            });
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<AdminDTO>(data);
             return mapped;
         }
 

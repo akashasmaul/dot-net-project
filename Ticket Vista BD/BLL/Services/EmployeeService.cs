@@ -37,6 +37,19 @@ namespace BLL.Services
         }
 
 
+        public static EmployeeDTO UnprotectedGet(int id)
+        {
+            var data = DataAccessFactory.EmployeeData().Read(id);
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Employee, EmployeeDTO>();
+            });
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<EmployeeDTO>(data);
+            return mapped;
+        }
+
+
         public static bool Create(EmployeeDTO obj)
         {
             var cfg = new MapperConfiguration(c =>

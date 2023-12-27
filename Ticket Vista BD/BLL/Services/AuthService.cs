@@ -159,6 +159,16 @@ namespace BLL.Services
             return false;
         }
 
+        public static bool ValidUser(string TokenKey ,int UserId)
+        {
+            var token = DataAccessFactory.TokenData().Read(TokenKey);
+                if(token != null && token.UserId == UserId)
+            {
+                return true;
+            }
+                return false;
+        }
+
         public static bool Logout(string TokenKey)
         {
             var exToken = DataAccessFactory.TokenData().Read(TokenKey);

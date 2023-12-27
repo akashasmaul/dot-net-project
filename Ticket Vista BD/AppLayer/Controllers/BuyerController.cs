@@ -1,4 +1,5 @@
-﻿using BLL.DTOs;
+﻿using AppLayer.Auth;
+using BLL.DTOs;
 using BLL.Services;
 using System;
 using System.Collections.Generic;
@@ -33,5 +34,33 @@ namespace AppLayer.Controllers
             }
 
         }
+
+
+        [BuyerLogged]
+        [HttpGet]
+        [Route("api/Buyer/ViewProfile/{id}/{Token}")]
+        public HttpResponseMessage ViewProfile(int id, string Token)
+        {
+            try
+            {
+                if (AuthService.ValidUser(Token, id))
+                {
+
+                    var data = BuyerService.UnprotectedGet(id);
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Msg = "Wrong Token or Id" });
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
+            }
+
+        }
+
     }
 }
