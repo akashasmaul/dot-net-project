@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class EmployeeRepo : Repo, IRepo<Employee, int, bool>, IAuth<Employee>
+    internal class EmployeeRepo : Repo, IRepo<Employee, int, bool>, IAuth<Employee>, IPassChng<Employee>
     {
         public Employee Authenticate(string username, string password)
         {
@@ -45,6 +45,25 @@ namespace DAL.Repos
         {
             var data = db.Employees.Find(obj.Id);
             obj.Password = data.Password;
+            db.Entry(data).CurrentValues.SetValues(obj);
+            return db.SaveChanges() > 0;
+        }
+
+
+        public bool UpdatePass(Employee obj)
+        {
+            var data = db.Employees.Find(obj.Id);
+            obj.UserName = data.UserName;
+            obj.Email = data.Email;
+            obj.FirstName = data.FirstName;
+            obj.LastName = data.LastName;
+            obj.PhoneNumber = data.PhoneNumber;
+            obj.Nationality = data.Nationality;
+            obj.DateOfBirth = data.DateOfBirth;
+            obj.Gender = data.Gender;
+            obj.Salary = data.Salary;
+            obj.SalId = data.SalId;
+            obj.City = data.City;
             db.Entry(data).CurrentValues.SetValues(obj);
             return db.SaveChanges() > 0;
         }

@@ -54,5 +54,11 @@ namespace DAL
         {
             return new EmployeeRepo();
         }
+        public static IPassChng<Employee> EmployeePassChange()
+        {
+            return new EmployeeRepo();
+        }
+
+
     }
 }

@@ -93,17 +93,17 @@ namespace AppLayer.Controllers
 
         [EmployeeLogged]
         [HttpPatch]
-        [Route("api/employee/updateProfile")]
-        public HttpResponseMessage UpdateEmployee(EmployeeUpdateDTO obj)
+        [Route("api/employee/updatePassword")]
+        public HttpResponseMessage UpdatePass(EmployeeUpdatePasswordDTO obj)
         {
             try
             {
-                var data = EmployeeService.Update(obj);
-                return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Updated Succesfully", Data = obj });
+                var data = EmployeeService.UpdatePass(obj);
+                return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Password Updated Succesfully"});
             }
             catch (Exception ex)
             {
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = obj });
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message});
             }
 
         }

@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
+    <Compile Include="Interfaces\IPassChng.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Migrations\202312281620207_dbinit.cs" />
     <Compile Include="Migrations\202312281620207_dbinit.designer.cs">

@@ -53,6 +53,7 @@
     <Compile Include="DTOs\BuyerDTO.cs" />
     <Compile Include="DTOs\EmployeeDTO.cs" />
     <Compile Include="DTOs\EmployeeUpdateDTO.cs" />
+    <Compile Include="DTOs\EmployeeUpdatePasswordDTO.cs" />
     <Compile Include="DTOs\EmployeeViewDTO.cs" />
     <Compile Include="DTOs\TokenDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

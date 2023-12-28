@@ -86,6 +86,21 @@ namespace BLL.Services
             return result;
         }
 
+        public static bool UpdatePass(EmployeeUpdatePasswordDTO obj)
+        {
+
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<EmployeeUpdatePasswordDTO, Employee>();
+            });
+            var mapper = new Mapper(cfg);
+            var employee = mapper.Map<Employee>(obj);
+
+            var result = DataAccessFactory.EmployeePassChange().UpdatePass(employee);
+
+            return result;
+        }
+
 
     }
 }
