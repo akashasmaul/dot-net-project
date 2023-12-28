@@ -40,5 +40,73 @@ namespace AppLayer.Controllers
 
         }
 
+        [EmployeeLogged]
+        [HttpGet]
+        [Route("api/employee/getEmployees")]
+        public HttpResponseMessage GetEmployee()
+        {
+            try
+            {
+                var data = EmployeeService.Get();
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
+            }
+
+        }
+
+        [EmployeeLogged]
+        [HttpPut]
+        [Route("api/employee/updateProfile")]
+        public HttpResponseMessage UpdateEmployee(EmployeeUpdateDTO obj)
+        {
+            try
+            {
+                var data = EmployeeService.Update(obj);
+                return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Updated Succesfully", Data = obj });
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = obj });
+            }
+
+        }
+
+        [EmployeeLogged]
+        [HttpDelete]
+        [Route("api/employee/DeleteEmployee/{id}")]
+        public HttpResponseMessage DeleteEmployee(int id)
+        {
+            try
+            {
+                var data = EmployeeService.Delete(id);
+                return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Deleted Succesfully" });
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
+            }
+
+        }
+
+        [EmployeeLogged]
+        [HttpPatch]
+        [Route("api/employee/updateProfile")]
+        public HttpResponseMessage UpdateEmployee(EmployeeUpdateDTO obj)
+        {
+            try
+            {
+                var data = EmployeeService.Update(obj);
+                return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Updated Succesfully", Data = obj });
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = obj });
+            }
+
+        }
+
     }
 }
