@@ -8,13 +8,19 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class AdminRepo : Repo ,IRepo<Admin ,int ,bool>, IAuth<Admin> 
+    internal class AdminRepo : Repo ,IRepo<Admin ,int ,bool>, IAuth<Admin> ,IFinance<int>
     {
         public Admin Authenticate(string username, string password)
         {
             var data = db.Admins.FirstOrDefault(u => u.UserName.Equals(username) && u.Password.Equals(password));
             if (data != null) return data;
             return null;
+        }
+
+        public int Count()
+        {
+            int totalAdmins = db.Admins.Count();  
+            return totalAdmins;
         }
 
         public bool Create(Admin obj)
@@ -47,5 +53,11 @@ namespace DAL.Repos
             db.Entry(data).CurrentValues.SetValues(obj);
             return db.SaveChanges() > 0;
         }
+
+       public int TotalSal()
+        {
+            return db.Admins.Sum(admin => admin.Salary.SalaryAmount);
+        }
+        
     }
 }

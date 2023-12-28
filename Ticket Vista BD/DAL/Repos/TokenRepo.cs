@@ -10,6 +10,11 @@ namespace DAL.Repos
 {
     internal class TokenRepo : Repo, IRepo<Token, string, Token>
     {
+        public int Count()
+        {
+            throw new NotImplementedException();
+        }
+
         public Token Create(Token obj)
         {
             db.Tokens.Add(obj);
@@ -31,6 +36,11 @@ namespace DAL.Repos
         {
            return db.Tokens.FirstOrDefault(t=>t.TokenKey.Equals(id));
 
+        }
+
+        public int TotalSal()
+        {
+            throw new NotImplementedException();
         }
 
         public Token Update(Token obj)

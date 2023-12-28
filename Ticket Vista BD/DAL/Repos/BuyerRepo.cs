@@ -18,6 +18,12 @@ namespace DAL.Repos
             if (data != null) return data;
             return null;
         }
+
+        public int Count()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Create(Buyer obj)
         {
             db.Buyers.Add(obj);
@@ -40,6 +46,7 @@ namespace DAL.Repos
         {
             return db.Buyers.Find(id);
         }
+
 
         public bool Update(Buyer obj)
         {

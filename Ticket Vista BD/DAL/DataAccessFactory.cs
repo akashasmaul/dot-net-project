@@ -54,5 +54,20 @@ namespace DAL
         {
             return new EmployeeRepo();
         }
+
+        public static IRepo<Salary ,int, bool> SalaryData()
+        {
+            return new SalaryRepo();
+        }
+
+        public static IFinance<int> AdminTSalary()
+        {
+            return new AdminRepo();
+        }
+
+        public static IFinance<int> EmployeeTSalary()
+        {
+            return new EmployeeRepo();
+        }
     }
 }

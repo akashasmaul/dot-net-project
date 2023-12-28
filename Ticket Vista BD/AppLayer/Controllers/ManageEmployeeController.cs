@@ -11,16 +11,18 @@ using System.Web.Http;
 
 namespace AppLayer.Controllers
 {
-    public class AdminController : ApiController
+    public class ManageEmployeeController : ApiController
     {
+
+
         [AdminLogged]
         [HttpPost]
-        [Route("api/Registration/Admin")]
-        public HttpResponseMessage Create(AdminDTO obj)
+        [Route("api/Registration/Employee")]
+        public HttpResponseMessage Create(EmployeeDTO obj)
         {
             try
             {
-                var data = AdminService.Create(obj);
+                var data = EmployeeService.Create(obj);
                 if (data)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Registered Successfully", Data = obj });
@@ -41,37 +43,17 @@ namespace AppLayer.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = obj });
             }
-
-        }
-
-
-
-        [AdminLogged]
-        [HttpGet]
-        [Route("api/admin/getAdmins")]
-        public HttpResponseMessage Get()
-        {
-            try
-            {
-                var data = AdminService.Get();
-                return Request.CreateResponse(HttpStatusCode.OK, data);
-            }
-            catch (Exception ex)
-            {
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
-            }
-
         }
 
 
         [AdminLogged]
         [HttpGet]
-        [Route("api/admin/getAdmin/{id}")]
-        public HttpResponseMessage Get(int id)
+        [Route("api/admin/getEmployees")]
+        public HttpResponseMessage GetEmployee()
         {
             try
             {
-                var data = AdminService.Get(id);
+                var data = EmployeeService.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -85,14 +67,13 @@ namespace AppLayer.Controllers
 
         [AdminLogged]
         [HttpGet]
-        [Route("api/admin/DeleteAdmin/{id}")]
-        public HttpResponseMessage DeleteAdmin(int id)
+        [Route("api/admin/getEmployee/{id}")]
+        public HttpResponseMessage GetEmployee(int id)
         {
             try
             {
-
-                var data = AdminService.Delete(id);
-                return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Deleted Succesfully" });
+                var data = EmployeeService.Get(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
             {
@@ -100,15 +81,16 @@ namespace AppLayer.Controllers
             }
 
         }
+
 
         [AdminLogged]
         [HttpPost]
-        [Route("api/admin/UpdateAdmin")]
-        public HttpResponseMessage UpdateAdmin(AdminUpdateDTO obj)
+        [Route("api/admin/UpdateEmployee")]
+        public HttpResponseMessage UpdateEmployee(EmployeeUpdateDTO obj)
         {
             try
             {
-                var data = AdminService.Update(obj);
+                var data = EmployeeService.Update(obj);
                 return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Updated Succesfully", Data = obj });
             }
             catch (Exception ex)
@@ -121,31 +103,19 @@ namespace AppLayer.Controllers
 
         [AdminLogged]
         [HttpGet]
-        [Route("api/admin/ViewProfile/{id}/{Token}")]
-        public HttpResponseMessage ViewProfile(int id,string Token)
+        [Route("api/admin/DeleteEmployee/{id}")]
+        public HttpResponseMessage DeleteEmployee(int id)
         {
             try
             {
-                if( AuthService.ValidUser(Token,id) )
-                {
-
-                    var data = AdminService.UnprotectedGet(id);
-                    return Request.CreateResponse(HttpStatusCode.OK, data);
-                }
-                else
-                {
-                     return Request.CreateResponse(HttpStatusCode.NotFound, new { Msg = "Wrong Token or Id" });
-                }
-
+                var data = EmployeeService.Delete(id);
+                return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Deleted Succesfully" });
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
             }
 
         }
-
-    
-
     }
 }
