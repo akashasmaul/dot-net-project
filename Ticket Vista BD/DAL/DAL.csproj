@@ -54,42 +54,33 @@
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IFinance.cs" />
+    <Compile Include="Interfaces\IPassChng.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
-    <Compile Include="Migrations\202312260442248_TableDeleted.cs" />
-    <Compile Include="Migrations\202312260442248_TableDeleted.designer.cs">
-      <DependentUpon>202312260442248_TableDeleted.cs</DependentUpon>
+    <Compile Include="Migrations\202312291524455_Merge 1.cs" />
+    <Compile Include="Migrations\202312291524455_Merge 1.designer.cs">
+      <DependentUpon>202312291524455_Merge 1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202312260454099_advertisetableAdded.cs" />
-    <Compile Include="Migrations\202312260454099_advertisetableAdded.designer.cs">
-      <DependentUpon>202312260454099_advertisetableAdded.cs</DependentUpon>
+    <Compile Include="Migrations\202312291809213_AdvertiseModified.cs" />
+    <Compile Include="Migrations\202312291809213_AdvertiseModified.designer.cs">
+      <DependentUpon>202312291809213_AdvertiseModified.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202312260511394_advertiseradvertiseAdded.cs" />
-    <Compile Include="Migrations\202312260511394_advertiseradvertiseAdded.designer.cs">
-      <DependentUpon>202312260511394_advertiseradvertiseAdded.cs</DependentUpon>
+    <Compile Include="Migrations\202312292022069_TableModified.cs" />
+    <Compile Include="Migrations\202312292022069_TableModified.designer.cs">
+      <DependentUpon>202312292022069_TableModified.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202312261052508_UserDBAdded.cs" />
-    <Compile Include="Migrations\202312261052508_UserDBAdded.designer.cs">
-      <DependentUpon>202312261052508_UserDBAdded.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312261103421_tableAltered.cs" />
-    <Compile Include="Migrations\202312261103421_tableAltered.designer.cs">
-      <DependentUpon>202312261103421_tableAltered.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312261819096_TableModifiedWithTicketPrice.cs" />
-    <Compile Include="Migrations\202312261819096_TableModifiedWithTicketPrice.designer.cs">
-      <DependentUpon>202312261819096_TableModifiedWithTicketPrice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312270450101_tempUpdate.cs" />
-    <Compile Include="Migrations\202312270450101_tempUpdate.designer.cs">
-      <DependentUpon>202312270450101_tempUpdate.cs</DependentUpon>
+    <Compile Include="Migrations\202312292056370_advertisetablemodifiedTitle.cs" />
+    <Compile Include="Migrations\202312292056370_advertisetablemodifiedTitle.designer.cs">
+      <DependentUpon>202312292056370_advertisetablemodifiedTitle.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Advertise.cs" />
-    <Compile Include="Models\AdvertiserAdvertise.cs" />
+    <Compile Include="Models\Event.cs" />
     <Compile Include="Repos\AdminRepo.cs" />
+    <Compile Include="Repos\AdvertiseRepo.cs" />
     <Compile Include="Repos\AdvertiserRepo.cs" />
     <Compile Include="Repos\BuyerRepo.cs" />
     <Compile Include="Repos\EmployeeRepo.cs" />
+    <Compile Include="Repos\EventRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\SalaryRepo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
@@ -107,26 +98,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202312260442248_TableDeleted.resx">
-      <DependentUpon>202312260442248_TableDeleted.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312291524455_Merge 1.resx">
+      <DependentUpon>202312291524455_Merge 1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312260454099_advertisetableAdded.resx">
-      <DependentUpon>202312260454099_advertisetableAdded.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312291809213_AdvertiseModified.resx">
+      <DependentUpon>202312291809213_AdvertiseModified.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312260511394_advertiseradvertiseAdded.resx">
-      <DependentUpon>202312260511394_advertiseradvertiseAdded.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312292022069_TableModified.resx">
+      <DependentUpon>202312292022069_TableModified.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312261052508_UserDBAdded.resx">
-      <DependentUpon>202312261052508_UserDBAdded.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312261103421_tableAltered.resx">
-      <DependentUpon>202312261103421_tableAltered.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312261819096_TableModifiedWithTicketPrice.resx">
-      <DependentUpon>202312261819096_TableModifiedWithTicketPrice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312270450101_tempUpdate.resx">
-      <DependentUpon>202312270450101_tempUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312292056370_advertisetablemodifiedTitle.resx">
+      <DependentUpon>202312292056370_advertisetablemodifiedTitle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

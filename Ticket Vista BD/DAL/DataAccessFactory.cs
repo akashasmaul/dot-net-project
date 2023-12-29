@@ -30,11 +30,11 @@ namespace DAL
             return new AdvertiserRepo();
         }
 
-        public static IRepo<Token,String,Token> TokenData()
-        { 
+        public static IRepo<Token, String, Token> TokenData()
+        {
             return new TokenRepo();
         }
-        public static IRepo<Buyer,int,bool> BuyerData()
+        public static IRepo<Buyer, int, bool> BuyerData()
         {
             return new BuyerRepo();
         }
@@ -54,8 +54,16 @@ namespace DAL
         {
             return new EmployeeRepo();
         }
+        public static IPassChng<Employee> EmployeePassChange()
+        {
+            return new EmployeeRepo();
+        }
+        public static IRepo<Event, int, bool> EventData()
+        {
+            return new EventRepo();
+        }
 
-        public static IRepo<Salary ,int, bool> SalaryData()
+        public static IRepo<Salary, int, bool> SalaryData()
         {
             return new SalaryRepo();
         }
@@ -69,5 +77,11 @@ namespace DAL
         {
             return new EmployeeRepo();
         }
+
+        public static IRepo<Advertise, int, bool> AdvertiseData()
+        {
+            return new AdvertiseRepo();
+        }
+
     }
 }
