@@ -32,3 +32,5 @@ C:\Users\ak4as\OneDrive\Desktop\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DA
 C:\Users\ak4as\OneDrive\Desktop\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.pdb
 C:\Users\ak4as\OneDrive\Desktop\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.dbinit.resources
 C:\Users\ak4as\OneDrive\Desktop\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\ak4as\OneDrive\Desktop\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.events.resources
+C:\Users\ak4as\OneDrive\Desktop\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.events1.resources

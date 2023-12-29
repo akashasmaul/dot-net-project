@@ -18,6 +18,7 @@ namespace DAL
         public DbSet<Salary> Salarys { get; set; }
         public DbSet<Advertise> Advertises { get; set; }
         public DbSet<AdvertiserAdvertise> AdvertiserAdvertises { get; set; }
+        public DbSet<Event> Events { get; set; }
 
 
 

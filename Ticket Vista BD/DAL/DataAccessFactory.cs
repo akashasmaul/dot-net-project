@@ -30,11 +30,11 @@ namespace DAL
             return new AdvertiserRepo();
         }
 
-        public static IRepo<Token,String,Token> TokenData()
-        { 
+        public static IRepo<Token, String, Token> TokenData()
+        {
             return new TokenRepo();
         }
-        public static IRepo<Buyer,int,bool> BuyerData()
+        public static IRepo<Buyer, int, bool> BuyerData()
         {
             return new BuyerRepo();
         }
@@ -58,7 +58,10 @@ namespace DAL
         {
             return new EmployeeRepo();
         }
-
+        public static IRepo<Event, int, bool> EventData()
+        {
+            return new EventRepo();
+        }
 
     }
 }

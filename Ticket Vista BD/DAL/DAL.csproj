@@ -53,19 +53,30 @@
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
+    <Compile Include="Interfaces\IEvent.cs" />
     <Compile Include="Interfaces\IPassChng.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Migrations\202312281620207_dbinit.cs" />
     <Compile Include="Migrations\202312281620207_dbinit.designer.cs">
       <DependentUpon>202312281620207_dbinit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312281948451_events.cs" />
+    <Compile Include="Migrations\202312281948451_events.designer.cs">
+      <DependentUpon>202312281948451_events.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312282059127_events1.cs" />
+    <Compile Include="Migrations\202312282059127_events1.designer.cs">
+      <DependentUpon>202312282059127_events1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Advertise.cs" />
     <Compile Include="Models\AdvertiserAdvertise.cs" />
+    <Compile Include="Models\Event.cs" />
     <Compile Include="Repos\AdminRepo.cs" />
     <Compile Include="Repos\AdvertiserRepo.cs" />
     <Compile Include="Repos\BuyerRepo.cs" />
     <Compile Include="Repos\EmployeeRepo.cs" />
+    <Compile Include="Repos\EventRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
     <Compile Include="TCVContext.cs" />
@@ -84,6 +95,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202312281620207_dbinit.resx">
       <DependentUpon>202312281620207_dbinit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312281948451_events.resx">
+      <DependentUpon>202312281948451_events.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312282059127_events1.resx">
+      <DependentUpon>202312282059127_events1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
