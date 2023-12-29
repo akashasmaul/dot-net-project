@@ -29,6 +29,7 @@ namespace BLL.Services
             var data = DataAccessFactory.EventData().Read(id);
             var cfg = new MapperConfiguration(c =>
             {
+                c.CreateMap<Employee, EmployeInfoEventDTO>();
                 c.CreateMap<Event, EventDTO>();
             });
             var mapper = new Mapper(cfg);

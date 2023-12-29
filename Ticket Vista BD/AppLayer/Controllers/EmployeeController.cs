@@ -156,7 +156,24 @@ namespace AppLayer.Controllers
                 }
             }
 
+        [EmployeeLogged]
+        [HttpGet]
+        [Route("api/employee/getEvent/{id}")]
+        public HttpResponseMessage GetEvent(int id)
+        {
+            try
+            {
+                var data = EventService.Get(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
+            }
+
         }
+
+    }
 
     }
 
