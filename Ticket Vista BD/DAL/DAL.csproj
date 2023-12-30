@@ -91,6 +91,7 @@
     <Compile Include="Repos\BuyerRepo.cs" />
     <Compile Include="Repos\EmployeeRepo.cs" />
     <Compile Include="Repos\EventRepo.cs" />
+    <Compile Include="Repos\ProfitRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\SalaryRepo.cs" />
     <Compile Include="Repos\TicketRepo.cs" />

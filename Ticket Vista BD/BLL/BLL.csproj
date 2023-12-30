@@ -71,6 +71,7 @@
     <Compile Include="Services\EmployeeService.cs" />
     <Compile Include="Services\EventService.cs" />
     <Compile Include="Services\FinanceService.cs" />
+    <Compile Include="Services\ProfitService.cs" />
     <Compile Include="Services\SalaryService.cs" />
   </ItemGroup>
   <ItemGroup>

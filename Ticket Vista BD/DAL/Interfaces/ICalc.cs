@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Interfaces
 {
-    public  interface ICalc<T>
+    public  interface ICalc<Type>
     {
-
+        int Amount(int id);
+        int TotalAmount();
     }
 }
