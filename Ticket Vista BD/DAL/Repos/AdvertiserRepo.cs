@@ -18,6 +18,11 @@ namespace DAL.Repos
             return null;
         }
 
+        public int Count()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Create(Advertiser obj)
         {
             db.Advertisers.Add(obj);
@@ -40,6 +45,7 @@ namespace DAL.Repos
         {
             return db.Advertisers.Find(id);
         }
+
 
         public bool Update(Advertiser obj)
         {

@@ -53,7 +53,7 @@
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
-    <Compile Include="Interfaces\IEvent.cs" />
+    <Compile Include="Interfaces\IFinance.cs" />
     <Compile Include="Interfaces\IPassChng.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Migrations\202312281620207_dbinit.cs" />
@@ -78,6 +78,7 @@
     <Compile Include="Repos\EmployeeRepo.cs" />
     <Compile Include="Repos\EventRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
+    <Compile Include="Repos\SalaryRepo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
     <Compile Include="TCVContext.cs" />
     <Compile Include="Models\Admin.cs" />

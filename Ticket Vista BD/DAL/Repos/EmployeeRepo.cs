@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class EmployeeRepo : Repo, IRepo<Employee, int, bool>, IAuth<Employee>, IPassChng<Employee>
+    internal class EmployeeRepo : Repo, IRepo<Employee, int, bool>, IAuth<Employee>, IPassChng<Employee>, IFinance<int>
     {
         public Employee Authenticate(string username, string password)
         {
@@ -16,6 +16,12 @@ namespace DAL.Repos
             var data = db.Employees.FirstOrDefault(u => u.UserName.Equals(username) && u.Password.Equals(password));
             if (data != null) return data;
             return null;
+        }
+        public int Count()
+        {
+
+            int totalEmployees = db.Employees.Count();
+            return totalEmployees;
         }
 
         public bool Create(Employee obj)
@@ -39,6 +45,11 @@ namespace DAL.Repos
         public Employee Read(int id)
         {
             return db.Employees.Find(id);
+        }
+
+        public int TotalSal()
+        {
+            return db.Employees.Sum(employee => employee.Salary.SalaryAmount);
         }
 
         public bool Update(Employee obj)

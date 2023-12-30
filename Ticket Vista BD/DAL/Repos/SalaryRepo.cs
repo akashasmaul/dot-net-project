@@ -8,40 +8,46 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class EventRepo : Repo, IRepo<Event, int, bool>
+    internal class SalaryRepo : Repo, IRepo<Salary, int, bool> 
     {
         public int Count()
         {
             throw new NotImplementedException();
         }
-        public bool Create(Event obj)
+
+        public bool Create(Salary obj)
         {
-            db.Events.Add(obj);
-            return db.SaveChanges() > 0;
+            db.Salarys.Add(obj);
+            return db.SaveChanges() > 0 ;
+           
         }
+
 
         public bool Delete(int id)
         {
             var data = Read(id);
-            db.Events.Remove(data);
+            db.Salarys.Remove(data);
             return db.SaveChanges() > 0;
+
         }
 
-        public List<Event> Read()
+        public List<Salary> Read()
         {
-            return db.Events.ToList();
+            return db.Salarys.ToList();
         }
 
-        public Event Read(int id)
+        public Salary Read(int id)
         {
-            return db.Events.Find(id);
+            return db.Salarys.Find(id);
         }
 
-        public bool Update(Event obj)
+        public bool Update(Salary obj)
         {
-            var data = db.Events.Find(obj.Id);
+            var data = db.Salarys.Find(obj.Id);
             db.Entry(data).CurrentValues.SetValues(obj);
             return db.SaveChanges() > 0;
+     
         }
+
     }
 }
