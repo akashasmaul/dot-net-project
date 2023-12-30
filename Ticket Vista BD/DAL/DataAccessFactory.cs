@@ -88,5 +88,9 @@ namespace DAL
             return new ProfitRepo();    
         }
 
+        public static IRepo<Ticket, int, bool> TicketData()
+        {
+            return new TicketRepo();
+        }
     }
 }

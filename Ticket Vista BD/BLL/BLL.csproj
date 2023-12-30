@@ -61,6 +61,7 @@
     <Compile Include="DTOs\FinanceDTO.cs" />
     <Compile Include="DTOs\SalaryDTO.cs" />
     <Compile Include="DTOs\SalaryViewDTO.cs" />
+    <Compile Include="DTOs\TicketDTO.cs" />
     <Compile Include="DTOs\TokenDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AdminService.cs" />

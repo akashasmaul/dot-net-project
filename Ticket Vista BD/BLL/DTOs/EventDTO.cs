@@ -20,7 +20,7 @@ namespace BLL.DTOs
         public string Description { get; set; }
 
         [Required]
-        public double Price { get; set; }
+        public int TicketPrice { get; set; }
 
         [Required]
         public DateTime Date { get; set; }
