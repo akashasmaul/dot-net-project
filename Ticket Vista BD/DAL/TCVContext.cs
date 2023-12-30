@@ -17,8 +17,8 @@ namespace DAL
         public DbSet<Token> Tokens { get; set; }
         public DbSet<Salary> Salarys { get; set; }
         public DbSet<Advertise> Advertises { get; set; }
-        public DbSet<AdvertiserAdvertise> AdvertiserAdvertises { get; set; }
         public DbSet<Event> Events { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
 
 
 

@@ -29,7 +29,7 @@ namespace BLL.DTOs
         [EmailAddress]
         public string Email { get; set; }
         [Required]
-        [StringLength(11, MinimumLength = 11)]
+        [StringLength(11, MinimumLength = 1)]
         public string PhoneNumber { get; set; }
         [Required]
         [StringLength(20)]

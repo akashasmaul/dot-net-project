@@ -22,7 +22,8 @@ namespace BLL.Services
                 TotalAdmins = Totaladmin,
                 TotalAdminSalary = TotalAdminSalary,
                 TotalEmployees = TotalEmployees,
-                TotalEmployeeSalary=TotalEmployeeSalary
+                TotalEmployeeSalary=TotalEmployeeSalary,
+                TotalAdminsAndEmployeeSalary =TotalAdminSalary+TotalEmployeeSalary,
             };
         }
     }

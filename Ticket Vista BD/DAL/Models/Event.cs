@@ -19,12 +19,11 @@ namespace DAL.Models
         public string Description { get; set; }
 
         [Required]
-        public double Price { get; set; }
+        public int TicketPrice { get; set; }
 
-        [Required]
-        public DateTime Date { get; set; }
-
-        public string Advertiser { get; set; }
+        [ForeignKey("Advertise")]
+        public int AdvertiseId { get; set; }
+        public virtual Advertise Advertise { get; set; }
 
         [ForeignKey("Moderator")]
         public int EmpId { get; set; }
