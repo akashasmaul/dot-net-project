@@ -47,3 +47,5 @@ D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.cspro
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.AdvertiseModified.resources
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.TableModified.resources
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.advertisetablemodifiedTitle.resources
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.TicketTableAdded.resources
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.EventTableModified.resources

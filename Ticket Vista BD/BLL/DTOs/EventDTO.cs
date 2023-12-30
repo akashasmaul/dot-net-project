@@ -24,8 +24,10 @@ namespace BLL.DTOs
 
         [Required]
         public DateTime Date { get; set; }
-
-        public string Advertiser { get; set; }
+        [Required]
+        [ForeignKey("Advertise")]
+        public int AdvertiseId { get; set; }
+        public virtual Advertise Advertise { get; set; }
 
         [ForeignKey("Moderator")]
         public int EmpId { get; set; }

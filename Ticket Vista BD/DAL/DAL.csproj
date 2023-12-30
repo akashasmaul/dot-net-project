@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
+    <Compile Include="Interfaces\ICalc.cs" />
     <Compile Include="Interfaces\IFinance.cs" />
     <Compile Include="Interfaces\IPassChng.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
@@ -72,9 +73,18 @@
     <Compile Include="Migrations\202312292056370_advertisetablemodifiedTitle.designer.cs">
       <DependentUpon>202312292056370_advertisetablemodifiedTitle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312300538028_TicketTableAdded.cs" />
+    <Compile Include="Migrations\202312300538028_TicketTableAdded.designer.cs">
+      <DependentUpon>202312300538028_TicketTableAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312300632183_EventTableModified.cs" />
+    <Compile Include="Migrations\202312300632183_EventTableModified.designer.cs">
+      <DependentUpon>202312300632183_EventTableModified.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Advertise.cs" />
     <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\Ticket.cs" />
     <Compile Include="Repos\AdminRepo.cs" />
     <Compile Include="Repos\AdvertiseRepo.cs" />
     <Compile Include="Repos\AdvertiserRepo.cs" />
@@ -83,6 +93,7 @@
     <Compile Include="Repos\EventRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\SalaryRepo.cs" />
+    <Compile Include="Repos\TicketRepo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
     <Compile Include="TCVContext.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -109,6 +120,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312292056370_advertisetablemodifiedTitle.resx">
       <DependentUpon>202312292056370_advertisetablemodifiedTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312300538028_TicketTableAdded.resx">
+      <DependentUpon>202312300538028_TicketTableAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312300632183_EventTableModified.resx">
+      <DependentUpon>202312300632183_EventTableModified.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

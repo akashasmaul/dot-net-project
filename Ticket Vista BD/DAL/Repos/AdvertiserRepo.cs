@@ -20,7 +20,7 @@ namespace DAL.Repos
 
         public int Count()
         {
-            throw new NotImplementedException();
+            return db.Advertisers.Count();
         }
 
         public bool Create(Advertiser obj)
