@@ -106,6 +106,7 @@
     <Compile Include="Controllers\ManageAdvertiseController.cs" />
     <Compile Include="Controllers\ManageEmployeeController.cs" />
     <Compile Include="Controllers\EventProfitController.cs" />
+    <Compile Include="Controllers\TicketController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

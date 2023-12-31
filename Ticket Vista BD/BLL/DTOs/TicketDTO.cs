@@ -11,9 +11,17 @@ namespace BLL.DTOs
 {
     public class TicketDTO
     {
-       
+        [Key]
+        public int Id { get; set; }
+        [Required]
+        public string Title { get; set; }
+
+        [Required]
+        public DateTime CreatedDate { get; set; }
         [Required]
         public int TicketQuantity { get; set; }
+        [Required]
+        public int TotalPrice { get; set; }
         [Required]
         [ForeignKey("Event")]
         public int EventId { get; set; }
@@ -22,5 +30,6 @@ namespace BLL.DTOs
         [ForeignKey("Buyer")]
         public int BuyerId { get; set; }
         public virtual Buyer Buyer { get; set; }
+
     }
 }

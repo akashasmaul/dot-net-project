@@ -74,6 +74,7 @@
     <Compile Include="Services\FinanceService.cs" />
     <Compile Include="Services\ProfitService.cs" />
     <Compile Include="Services\SalaryService.cs" />
+    <Compile Include="Services\TicketService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

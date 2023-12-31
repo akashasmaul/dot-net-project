@@ -21,9 +21,6 @@ namespace BLL.DTOs
 
         [Required]
         public int TicketPrice { get; set; }
-
-        [Required]
-        public DateTime Date { get; set; }
         [Required]
         [ForeignKey("Advertise")]
         public int AdvertiseId { get; set; }

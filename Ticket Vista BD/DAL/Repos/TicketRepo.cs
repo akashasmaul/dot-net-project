@@ -17,14 +17,8 @@ namespace DAL.Repos
 
         public bool Create(Ticket obj)
         {
-            var evnt = db.Events.Find(obj.Id);
-            var tkt = new Ticket(); 
-            tkt.Title = evnt.Title;
-            tkt.TicketQuantity =obj.TicketQuantity;
-            tkt.CreatedDate = DateTime.Now;
-            tkt.TotalPrice = obj.TicketQuantity*evnt.TicketPrice;
-            tkt.BuyerId = obj.BuyerId;
-            db.Tickets.Add(tkt);
+
+            db.Tickets.Add(obj);
             return db.SaveChanges() > 0;
         }
 

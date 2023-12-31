@@ -50,3 +50,4 @@ D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migra
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.TicketTableAdded.resources
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.EventTableModified.resources
 D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.EventModified.resources
+D:\Asp.net Final Project\dot-net-project\Ticket Vista BD\DAL\obj\Debug\DAL.Migrations.DateRemovedEvent.resources

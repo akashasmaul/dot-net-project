@@ -22,9 +22,6 @@ namespace DAL.Models
         public int TicketPrice { get; set; }
 
         [Required]
-        public DateTime Date { get; set; }
-
-        [Required]
         [ForeignKey("Advertise")]
         public int AdvertiseId { get; set; }
         public virtual Advertise Advertise { get; set; }

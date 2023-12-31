@@ -85,6 +85,10 @@
     <Compile Include="Migrations\202312301744334_EventModified.designer.cs">
       <DependentUpon>202312301744334_EventModified.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312301815567_DateRemovedEvent.cs" />
+    <Compile Include="Migrations\202312301815567_DateRemovedEvent.designer.cs">
+      <DependentUpon>202312301815567_DateRemovedEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Advertise.cs" />
     <Compile Include="Models\Event.cs" />
@@ -134,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312301744334_EventModified.resx">
       <DependentUpon>202312301744334_EventModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312301815567_DateRemovedEvent.resx">
+      <DependentUpon>202312301815567_DateRemovedEvent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
