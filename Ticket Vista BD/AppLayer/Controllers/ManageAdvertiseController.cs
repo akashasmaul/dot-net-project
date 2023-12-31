@@ -45,5 +45,69 @@ namespace AppLayer.Controllers
 
         }
 
+        [AdvertiserLogged]
+        [HttpGet]
+        [Route("api/advertiser/advertise/History/{id}")]
+        public HttpResponseMessage History(int id)
+        {
+            try
+            {
+                var data = AdvertiseService.History(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
+            }
+        }
+
+
+        [AdvertiserLogged]
+        [HttpGet]
+        [Route("api/advertiser/advertise/ViewApproved/{id}")]
+        public HttpResponseMessage ViewApproved(int id)
+        {
+            try
+            {
+                var data = AdvertiseService.ViewApproved(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
+            }
+        }
+
+        [AdvertiserLogged]
+        [HttpGet]
+        [Route("api/advertiser/advertise/ViewDeclined/{id}")]
+        public HttpResponseMessage ViewDeclined(int id)
+        {
+            try
+            {
+                var data = AdvertiseService.ViewDeclined(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
+            }
+        }
+
+        [AdvertiserLogged]
+        [HttpGet]
+        [Route("api/advertiser/advertise/ViewDeclined/{id}")]
+        public HttpResponseMessage ViewPendingIndividual(int id)
+        {
+            try
+            {
+                var data = AdvertiseService.ViewPendingIndividual(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
+            }
+        }
     }
 }

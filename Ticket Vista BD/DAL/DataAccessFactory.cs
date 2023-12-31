@@ -92,5 +92,11 @@ namespace DAL
         {
             return new TicketRepo();
         }
+
+        public static IAds<Advertise, int> AdsData()
+        {
+            return new AdvertiseRepo();
+        }
+        
     }
 }

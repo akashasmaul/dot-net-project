@@ -49,6 +49,7 @@
     <Compile Include="DTOs\AdminDTO.cs" />
     <Compile Include="DTOs\AdminUpdateDTO.cs" />
     <Compile Include="DTOs\AdminViewDTO.cs" />
+    <Compile Include="DTOs\AdsViewDTO.cs" />
     <Compile Include="DTOs\AdvertiseCreateDTO.cs" />
     <Compile Include="DTOs\AdvertiseDTO.cs" />
     <Compile Include="DTOs\AdvertiserDTO.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="DTOs\EventDTO.cs" />
     <Compile Include="DTOs\EventUpdateDTO.cs" />
     <Compile Include="DTOs\FinanceDTO.cs" />
+    <Compile Include="DTOs\PendingAdsDTO.cs" />
     <Compile Include="DTOs\SalaryDTO.cs" />
     <Compile Include="DTOs\SalaryViewDTO.cs" />
     <Compile Include="DTOs\TicketDTO.cs" />
