@@ -96,7 +96,7 @@ namespace AppLayer.Controllers
 
         [AdvertiserLogged]
         [HttpGet]
-        [Route("api/advertiser/advertise/ViewDeclined/{id}")]
+        [Route("api/advertiser/advertise/ViewPendingInd/{id}")]
         public HttpResponseMessage ViewPendingIndividual(int id)
         {
             try

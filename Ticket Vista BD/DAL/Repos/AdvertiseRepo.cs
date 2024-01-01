@@ -75,5 +75,11 @@ namespace DAL.Repos
         {
             return db.Advertises.Where(a => a.Status == "Declined" && a.AdvertiserId == id).ToList();
         }
+
+        public List<Advertise> ViewPendingIndividual(int id)
+        {
+            return db.Advertises.Where(a => a.Status == "Pending" && a.AdvertiserId == id).ToList();
+
+        }
     }
 }
