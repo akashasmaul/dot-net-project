@@ -10,5 +10,8 @@ namespace DAL.Interfaces
     {
         int Amount(int id);
         int TotalAmount();
+        int TotalEventTicket(int id);
+        int EventPayable(int id);
+        int EventSale(int id);
     }
 }

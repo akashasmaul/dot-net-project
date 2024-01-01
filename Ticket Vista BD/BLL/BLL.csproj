@@ -58,6 +58,7 @@
     <Compile Include="DTOs\EmployeeViewDTO.cs" />
     <Compile Include="DTOs\EmployeInfoEventDTO.cs" />
     <Compile Include="DTOs\EventDTO.cs" />
+    <Compile Include="DTOs\EventProfitDTO.cs" />
     <Compile Include="DTOs\FinanceDTO.cs" />
     <Compile Include="DTOs\SalaryDTO.cs" />
     <Compile Include="DTOs\SalaryViewDTO.cs" />

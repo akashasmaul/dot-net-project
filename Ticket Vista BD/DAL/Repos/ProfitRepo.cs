@@ -39,5 +39,33 @@ namespace DAL.Repos
             return TotalProfit;
            
         }
+
+        public int TotalEventTicket(int id)
+        {
+            var TotalTickets = db.Tickets.
+            Where(t => t.EventId == id)
+            .Sum(t => t.TicketQuantity);
+            return TotalTickets;
+        }
+
+        public int EventPayable(int id)
+        {
+            var totalTickets = TotalEventTicket(id);
+
+            var data = db.Events.Find(id);
+            var advertiseId = data.AdvertiseId;
+            var advertise = db.Advertises.Find(advertiseId);
+            var TotalEventPayable = advertise.TicketPrice * totalTickets;
+            return TotalEventPayable;
+
+        }
+
+        public int EventSale(int id)
+        {
+            var totalSale = db.Tickets
+                  .Where(t => t.EventId == id)
+                  .Sum(t => t.TotalPrice);
+            return totalSale;
+        }
     }
 }

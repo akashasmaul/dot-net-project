@@ -22,9 +22,9 @@ namespace AppLayer.Controllers
             try
             {
                 var data = ProfitService.EventProfit(id);
-                if (data>0)
+                if (data != null)
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, new {Msg ="Profit From The Event :" ,Data =data});
+                    return Request.CreateResponse(HttpStatusCode.OK, new {Msg ="Event Profit Details:" ,Data =data});
                 }
                 return Request.CreateResponse(HttpStatusCode.NotFound, new { Msg = "Data Not Found" });
 
