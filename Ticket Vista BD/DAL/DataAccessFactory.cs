@@ -78,5 +78,25 @@ namespace DAL
             return new EmployeeRepo();
         }
 
+        public static IRepo<Advertise, int, bool> AdvertiseData()
+        {
+            return new AdvertiseRepo();
+        }
+
+        public static ICalc<int> ProfitData()
+        {
+            return new ProfitRepo();    
+        }
+     
+        public static IRepo<Ticket, int, bool> TicketData()
+        {
+            return new TicketRepo();
+        }
+
+        public static IAds<Advertise, int> AdsData()
+        {
+            return new AdvertiseRepo();
+        }
+        
     }
 }

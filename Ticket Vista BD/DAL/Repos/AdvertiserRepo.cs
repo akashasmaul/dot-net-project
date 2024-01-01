@@ -20,7 +20,7 @@ namespace DAL.Repos
 
         public int Count()
         {
-            throw new NotImplementedException();
+            return db.Advertisers.Count();
         }
 
         public bool Create(Advertiser obj)
@@ -50,6 +50,7 @@ namespace DAL.Repos
         public bool Update(Advertiser obj)
         {
             var data = db.Advertisers.Find(obj.Id);
+            obj.Password = data.Password;
             db.Entry(data).CurrentValues.SetValues(obj);
             return db.SaveChanges() > 0;
         }

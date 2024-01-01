@@ -21,7 +21,7 @@ namespace DAL.Repos
 
         public int Count()
         {
-            throw new NotImplementedException();
+            return db.Buyers.Count();
         }
 
         public bool Create(Buyer obj)

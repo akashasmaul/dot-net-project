@@ -102,7 +102,11 @@
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BuyerController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\EmployeeManageController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
+    <Compile Include="Controllers\EventProfitController.cs" />
     <Compile Include="Controllers\FinanceController.cs" />
+    <Compile Include="Controllers\ManageAdvertiseController.cs" />
     <Compile Include="Controllers\ManageEmployeeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

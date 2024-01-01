@@ -66,7 +66,43 @@ namespace AppLayer.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
             }
+        }
+
+
+            [AdvertiserLogged]
+            [HttpPut]
+            [Route("api/advertiser/updateProfile")]
+            public HttpResponseMessage UpdateAdvertiser(AdvertiserUpdateDTO obj)
+            {
+                try
+                {
+                    var data = AdvertiserService.Update(obj);
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Updated Succesfully", Data = obj });
+                }
+                catch (Exception ex)
+                {
+                    return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = obj });
+                }
+
+            }
+
+        [AdvertiserLogged]
+        [HttpDelete]
+        [Route("api/advertiser/DeleteAdvertiser/{id}")]
+        public HttpResponseMessage DeleteAdvertiser(int id)
+        {
+            try
+            {
+                var data = AdvertiserService.Delete(id);
+                return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Deleted Succesfully" });
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, });
+            }
 
         }
+
     }
-}
+    }
+

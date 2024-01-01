@@ -50,5 +50,26 @@ namespace BLL.Services
             var mapped = mapper.Map<AdvertiserDTO>(data);
             return mapped;
         }
+
+        public static bool Delete(int id)
+        {
+            return DataAccessFactory.AdvertiserData().Delete(id);
+
+        }
+
+        public static bool Update(AdvertiserUpdateDTO obj)
+        {
+
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<AdvertiserUpdateDTO, Advertiser>();
+            });
+            var mapper = new Mapper(cfg);
+            var client = mapper.Map<Advertiser>(obj);
+
+            var result = DataAccessFactory.AdvertiserData().Update(client);
+
+            return result;
+        }
     }
 }

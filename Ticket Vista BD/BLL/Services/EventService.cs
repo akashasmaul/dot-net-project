@@ -56,12 +56,12 @@ namespace BLL.Services
             return DataAccessFactory.EventData().Delete(id);
 
         }
-        public static bool Update(EventDTO obj)
+        public static bool Update(EventUpdateDTO obj)
         {
 
             var cfg = new MapperConfiguration(c =>
             {
-                c.CreateMap<EventDTO, Event>();
+                c.CreateMap<EventUpdateDTO, Event>();
             });
             var mapper = new Mapper(cfg);
             var evnt = mapper.Map<Event>(obj);
@@ -70,5 +70,6 @@ namespace BLL.Services
 
             return result;
         }
+       
     }
 }

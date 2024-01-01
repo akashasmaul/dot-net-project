@@ -12,7 +12,7 @@ namespace DAL.Repos
     {
         public int Count()
         {
-            throw new NotImplementedException();
+            return db.Events.Count();
         }
         public bool Create(Event obj)
         {
